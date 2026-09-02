@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<!-- Segurança: política restritiva de recursos externos (só o essencial: fontes do
+     Google e o script inline abaixo, identificado pelo hash). Ao publicar o site,
+     configure também estes headers HTTP no provedor de hospedagem (não dá para
+     fazer isso só por HTML): X-Frame-Options: DENY (ou frame-ancestors 'none' na
+     CSP), X-Content-Type-Options: nosniff, Strict-Transport-Security e forçar
+     redirecionamento http -> https. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-/x7W7R75k8Roq0WaVRQX9blP4OufE5xbAdzklGxsgpw='; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' javascript:; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<script>document.documentElement.classList.add('js');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Design Code | Criação de Sites Profissionais e Modernos</title>
+<meta name="description" content="A Web Design Code cria sites modernos, rápidos e responsivos para destacar sua empresa na internet e conquistar mais clientes. Solicite um orçamento.">
+<meta name="theme-color" content="#06060f">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Web Design Code | Sites profissionais que transformam visitas em resultados">
+<meta property="og:description" content="Criação de sites modernos, rápidos e estratégicos para destacar sua empresa na internet.">
+<!-- [EDITAR] troque pela URL absoluta do site já publicado, ex.: https://www.seudominio.com.br/assets/img/logo.png -->
+<meta property="og:image" content="assets/img/logo.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2306060f'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='28' font-weight='700' fill='%23a855f7' text-anchor='middle'%3E%3C/%3E%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!--
+============================================================================
+ GUIA RÁPIDO DE PERSONALIZAÇÃO — Web Design Code
+ Todos os pontos que você provavelmente vai querer alterar estão marcados
+ com o comentário [EDITAR] neste arquivo, ou indicados abaixo:
+
+ 1. LOGO ......... salve o arquivo da sua logo em:
+                    assets/img/logo.png  (fundo branco, conforme enviado)
+                    Enquanto o arquivo não existir, aparece um texto
+                    substituto "<WDC>" no lugar, sem quebrar o layout.
+
+ 2. WHATSAPP ..... abra assets/js/script.js e edite a constante
+                    WHATSAPP_NUMBER (topo do arquivo).
+
+ 3. INSTAGRAM, E-MAIL, PREÇOS, TEXTOS e PORTFÓLIO ..... procure por
+                    [EDITAR] neste arquivo (Ctrl+F).
+============================================================================
+-->
+
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+<div class="bg-glow bg-glow--one" aria-hidden="true"></div>
+<div class="bg-glow bg-glow--two" aria-hidden="true"></div>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+
+    <a href="#inicio" class="logo" aria-label="Web Design Code — página inicial">
+      <span class="logo__badge">
+        <img src="assets/img/logo.png" alt="Web Design Code" class="logo__img js-logo-img">
+        <span class="logo__fallback">&lt;WDC&gt;</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navegação principal">
+      <ul class="nav__list">
+        <li><a href="#inicio" class="nav__link">Início</a></li>
+        <li><a href="#sobre" class="nav__link">Sobre</a></li>
+        <li><a href="#servicos" class="nav__link">Serviços</a></li>
+        <li><a href="#portfolio" class="nav__link">Portfólio</a></li>
+        <li><a href="#planos" class="nav__link">Planos</a></li>
+        <li><a href="#contato" class="nav__link">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <a href="#" class="btn btn--primary btn--sm whatsapp-link"
+         data-wa-message="Olá! Conheci a Web Design Code pelo site e gostaria de solicitar um orçamento.">
+        <span class="btn__text-full">Solicitar orçamento</span>
+        <span class="btn__text-short">Orçamento</span>
+      </a>
+      <button type="button" class="hamburger" id="hamburger" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu de navegação">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ======================= HERO ======================= -->
+  <section class="hero" id="inicio">
+    <div class="container hero__inner">
+
+      <div class="hero__content reveal">
+        <p class="eyebrow">Criação de sites sob medida</p>
+        <h1 class="hero__title">
+          Sites profissionais que transformam
+          <span class="text-gradient">visitas em resultados</span>
+        </h1>
+        <p class="hero__subtitle">
+          Criamos páginas modernas, rápidas e estratégicas para destacar sua
+          empresa na internet e gerar mais clientes.
+        </p>
+        <div class="hero__actions">
+          <a href="#" class="btn btn--primary btn--lg whatsapp-link"
+             data-wa-message="Olá! Conheci a Web Design Code pelo site e gostaria de solicitar um orçamento.">
+            Solicitar orçamento
+          </a>
+          <a href="#servicos" class="btn btn--ghost btn--lg">Conhecer serviços</a>
+        </div>
+      </div>
+
+      <div class="hero__visual reveal" aria-hidden="true">
+        <svg viewBox="0 0 520 420" class="hero__svg" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="gradLine" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#a855f7"/>
+              <stop offset="100%" stop-color="#d946ef"/>
+            </linearGradient>
+            <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+              <feGaussianBlur stdDeviation="8" result="blur"/>
+              <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+
+          <rect x="50" y="40" width="380" height="300" rx="20" fill="#0f0f1f" stroke="rgba(168,85,247,0.35)" stroke-width="1.5"/>
+          <rect x="50" y="40" width="380" height="42" rx="20" fill="#141428"/>
+          <circle cx="76" cy="61" r="6" fill="#ff5f57"/>
+          <circle cx="96" cy="61" r="6" fill="#febc2e"/>
+          <circle cx="116" cy="61" r="6" fill="#28c840"/>
+
+          <rect x="76" y="104" width="120" height="10" rx="5" fill="#a855f7" opacity="0.9"/>
+          <rect x="76" y="126" width="200" height="8" rx="4" fill="#5b5b78"/>
+          <rect x="76" y="146" width="160" height="8" rx="4" fill="#5b5b78"/>
+          <rect x="96" y="166" width="220" height="8" rx="4" fill="#d946ef" opacity="0.85"/>
+          <rect x="96" y="186" width="140" height="8" rx="4" fill="#5b5b78"/>
+          <rect x="76" y="206" width="180" height="8" rx="4" fill="#5b5b78"/>
+          <rect x="76" y="226" width="90" height="8" rx="4" fill="#a855f7" opacity="0.7"/>
+
+          <polyline points="76,300 150,270 210,290 270,240 330,255 396,205"
+            fill="none" stroke="url(#gradLine)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+          <circle cx="396" cy="205" r="7" fill="#d946ef" filter="url(#glow)"/>
+
+          <g filter="url(#glow)">
+            <rect x="330" y="30" width="70" height="50" rx="14" fill="#1a1a30" stroke="#a855f7" stroke-width="1.5"/>
+            <text x="365" y="63" text-anchor="middle" font-family="monospace" font-size="24" font-weight="700" fill="#c084fc">&lt;/&gt;</text>
+          </g>
+
+          <g filter="url(#glow)" opacity="0.9">
+            <circle cx="60" cy="360" r="26" fill="#151528" stroke="#d946ef" stroke-width="1.5"/>
+            <path d="M50 360 l7 7 14 -16" fill="none" stroke="#d946ef" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+
+          <g filter="url(#glow)" opacity="0.85">
+            <rect x="410" y="260" width="86" height="86" rx="18" fill="#151528" stroke="#7c3aed" stroke-width="1.5"/>
+            <path d="M428 320 l16 -22 14 12 20 -30" fill="none" stroke="#a855f7" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M462 280 h16 v16" fill="none" stroke="#a855f7" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+        </svg>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================= INDICADORES ======================= -->
+  <section class="trust" aria-label="Diferenciais Web Design Code">
+    <div class="container trust__grid">
+
+      <div class="trust__item reveal">
+        <svg class="trust__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        <span>Sites modernos</span>
+      </div>
+
+      <div class="trust__item reveal">
+        <svg class="trust__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+        <span>Design responsivo</span>
+      </div>
+
+      <div class="trust__item reveal">
+        <svg class="trust__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+        <span>Entrega profissional</span>
+      </div>
+
+      <div class="trust__item reveal">
+        <svg class="trust__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12a8 8 0 1116 0"/><path d="M4 12v5a2 2 0 002 2h1v-7H4zM20 12v5a2 2 0 01-2 2h-1v-7h3z"/></svg>
+        <span>Suporte personalizado</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================= SOBRE ======================= -->
+  <section class="about" id="sobre">
+    <div class="container about__grid">
+
+      <div class="about__text reveal">
+        <p class="eyebrow">Sobre a Web Design Code</p>
+        <h2>Sua presença digital começa com um site profissional</h2>
+        <p class="about__paragraph">
+          A Web Design Code desenvolve sites modernos, rápidos e personalizados
+          para empresas, profissionais e empreendedores que desejam fortalecer
+          sua presença digital, apresentar seus serviços e conquistar novos
+          clientes.
+        </p>
+
+        <ul class="check-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg> Design personalizado</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg> Compatível com celular, tablet e computador</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg> Carregamento rápido</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg> Botões e integração com WhatsApp</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg> Estrutura preparada para gerar resultados</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg> Atendimento personalizado</li>
+        </ul>
+      </div>
+
+      <div class="about__visual reveal" aria-hidden="true">
+        <div class="about__card">
+          <span class="about__card-tag">responsivo</span>
+          <div class="about__devices">
+            <svg viewBox="0 0 24 24" class="device device--desktop" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            <svg viewBox="0 0 24 24" class="device device--tablet" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+            <svg viewBox="0 0 24 24" class="device device--mobile" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+          </div>
+          <div class="about__card-glow" aria-hidden="true"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================= SERVIÇOS ======================= -->
+  <section class="services" id="servicos">
+    <div class="container">
+      <div class="section-heading reveal">
+        <p class="eyebrow">O que fazemos</p>
+        <h2>Serviços feitos para o seu objetivo</h2>
+        <p>Escolha o formato ideal para o momento da sua empresa ou projeto.</p>
+      </div>
+
+      <div class="services__grid">
+
+        <article class="service-card reveal">
+          <span class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 20V9"/></svg></span>
+          <h3>Landing Pages</h3>
+          <p>Página única, objetiva e focada em conversão para produtos, serviços ou campanhas.</p>
+          <a href="#" class="service-card__link whatsapp-link" data-wa-message="Olá! Tenho interesse no serviço de Landing Pages e gostaria de solicitar um orçamento.">Solicitar orçamento</a>
+        </article>
+
+        <article class="service-card reveal">
+          <span class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-8h6v8"/></svg></span>
+          <h3>Sites institucionais</h3>
+          <p>Presença completa para apresentar sua empresa, serviços e diferenciais na internet.</p>
+          <a href="#" class="service-card__link whatsapp-link" data-wa-message="Olá! Tenho interesse em um Site Institucional e gostaria de solicitar um orçamento.">Solicitar orçamento</a>
+        </article>
+
+        <article class="service-card reveal">
+          <span class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 3h16v18l-8-4-8 4V3z"/></svg></span>
+          <h3>Cardápios digitais</h3>
+          <p>Cardápio online moderno, fácil de navegar e pronto para compartilhar com seus clientes.</p>
+          <a href="#" class="service-card__link whatsapp-link" data-wa-message="Olá! Tenho interesse em um Cardápio Digital e gostaria de solicitar um orçamento.">Solicitar orçamento</a>
+        </article>
+
+        <article class="service-card reveal">
+          <span class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.2"/><rect x="14" y="3" width="7" height="7" rx="1.2"/><rect x="3" y="14" width="7" height="7" rx="1.2"/><rect x="14" y="14" width="7" height="7" rx="1.2"/></svg></span>
+          <h3>Catálogos de produtos</h3>
+          <p>Vitrine digital organizada para exibir seus produtos com fotos, descrições e preços.</p>
+          <a href="#" class="service-card__link whatsapp-link" data-wa-message="Olá! Tenho interesse em um Catálogo de Produtos e gostaria de solicitar um orçamento.">Solicitar orçamento</a>
+        </article>
+
+        <article class="service-card reveal">
+          <span class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h2l2.4 12.2a2 2 0 002 1.8h8.2a2 2 0 002-1.6L21 7H6"/></svg></span>
+          <h3>Páginas de vendas</h3>
+          <p>Estrutura estratégica pensada para apresentar sua oferta e conduzir o visitante à compra.</p>
+          <a href="#" class="service-card__link whatsapp-link" data-wa-message="Olá! Tenho interesse em uma Página de Vendas e gostaria de solicitar um orçamento.">Solicitar orçamento</a>
+        </article>
+
+        <article class="service-card reveal">
+          <span class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M14.7 6.3a4 4 0 10-5.4 5.4l-6 6a1.5 1.5 0 002.1 2.1l6-6a4 4 0 005.4-5.4z"/></svg></span>
+          <h3>Manutenção de sites</h3>
+          <p>Atualizações, ajustes e suporte contínuo para manter seu site sempre no ar e em dia.</p>
+          <a href="#" class="service-card__link whatsapp-link" data-wa-message="Olá! Tenho interesse em Manutenção de Site e gostaria de solicitar um orçamento.">Solicitar orçamento</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= PLANOS ======================= -->
+  <section class="pricing" id="planos">
+    <div class="container">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Planos e valores</p>
+        <h2>Um plano para cada etapa do seu projeto</h2>
+        <!-- [EDITAR] textos e valores dos planos abaixo -->
+      </div>
+
+      <div class="pricing__grid">
+
+        <article class="price-card reveal">
+          <h3>Landing Page</h3>
+          <p class="price-card__price"><span class="price-card__from">a partir de</span> R$ 499</p>
+          <p class="price-card__desc">Página profissional para apresentar um produto, serviço ou campanha.</p>
+          <a href="#" class="btn btn--ghost btn--block whatsapp-link" data-wa-message="Olá! Tenho interesse no plano Landing Page (a partir de R$ 499) e gostaria de solicitar um orçamento.">Solicitar orçamento</a>
+        </article>
+
+        <article class="price-card price-card--featured reveal">
+          <span class="price-card__badge">Recomendado</span>
+          <h3>Site Profissional</h3>
+          <p class="price-card__price"><span class="price-card__from">a partir de</span> R$ 899</p>
+          <p class="price-card__desc">Site com até 4 páginas para apresentar sua empresa e seus serviços.</p>
+          <a href="#" class="btn btn--primary btn--block whatsapp-link" data-wa-message="Olá! Tenho interesse no plano Site Profissional (a partir de R$ 899) e gostaria de solicitar um orçamento.">Solicitar orçamento</a>
+        </article>
+
+        <article class="price-card reveal">
+          <h3>Site Completo</h3>
+          <p class="price-card__price"><span class="price-card__from">a partir de</span> R$ 1.299</p>
+          <p class="price-card__desc">Projeto mais completo, com até 6 páginas e recursos personalizados.</p>
+          <a href="#" class="btn btn--ghost btn--block whatsapp-link" data-wa-message="Olá! Tenho interesse no plano Site Completo (a partir de R$ 1.299) e gostaria de solicitar um orçamento.">Solicitar orçamento</a>
+        </article>
+
+      </div>
+
+      <p class="pricing__note">Domínio, hospedagem e recursos adicionais podem ser cobrados separadamente, conforme a necessidade do projeto.</p>
+    </div>
+  </section>
+
+  <!-- ======================= PORTFÓLIO ======================= -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Portfólio</p>
+        <h2>Projetos que mostram o que podemos criar</h2>
+        <p>Conheça alguns modelos de sites desenvolvidos para demonstrar as possibilidades da Web Design Code.</p>
+      </div>
+
+      <!--
+        [EDITAR] PORTFÓLIO — cada <article class="portfolio-card"> abaixo tem 5 pontos fáceis
+        de trocar, todos marcados com [EDITAR]:
+
+        1. IMAGEM: dentro de <div class="portfolio-card__screen">, substitua o <svg ...>...</svg>
+           (mockup ilustrativo) por uma captura de tela real, por exemplo:
+             <img src="assets/img/portfolio/nome-do-projeto.jpg" alt="Descrição do projeto" class="portfolio-card__img">
+        2. NOME: texto dentro de <h3>.
+        3. DESCRIÇÃO: texto dentro do <p> logo abaixo do nome.
+        4. CATEGORIA: texto dentro de <span class="portfolio-card__category">.
+        5. LINK: atributo data-portfolio-link do <button class="portfolio-card__btn">. Deixe "#"
+           para abrir a visualização ampliada do mockup (comportamento atual); troque por uma URL
+           real (ex.: "https://meusite.com") para o botão abrir esse link em vez do mockup.
+
+        A etiqueta "Projeto demonstrativo" é fixa em todos os cards — ela existe para deixar claro
+        que são modelos e não trabalhos de clientes reais. Não é necessário editá-la.
+      -->
+      <div class="portfolio__grid">
+
+        <article class="portfolio-card reveal">
+          <div class="portfolio-card__frame">
+            <span class="portfolio-card__tag">Projeto demonstrativo</span>
+            <div class="portfolio-card__bar" aria-hidden="true">
+              <span class="portfolio-card__dot portfolio-card__dot--red"></span>
+              <span class="portfolio-card__dot portfolio-card__dot--yellow"></span>
+              <span class="portfolio-card__dot portfolio-card__dot--green"></span>
+            </div>
+            <div class="portfolio-card__screen">
+              <!-- [EDITAR] IMAGEM: troque este <svg> por <img src="assets/img/portfolio/landing-page.jpg" alt="Modelo de Landing Page Profissional" class="portfolio-card__img"> -->
+              <svg viewBox="0 0 400 250" class="portfolio-card__mockup" aria-hidden="true" focusable="false">
+                <rect width="400" height="250" fill="#0d0d1e"/>
+                <rect width="400" height="26" fill="#141428"/>
+                <circle cx="18" cy="13" r="4" fill="#a855f7"/>
+                <rect x="330" y="9" width="16" height="8" rx="4" fill="#3a3a55"/>
+                <rect x="352" y="9" width="16" height="8" rx="4" fill="#3a3a55"/>
+                <rect x="374" y="9" width="16" height="8" rx="4" fill="#3a3a55"/>
+                <rect x="32" y="60" width="180" height="16" rx="4" fill="#e8e8f0"/>
+                <rect x="32" y="84" width="130" height="16" rx="4" fill="url(#lpGrad)"/>
+                <rect x="32" y="116" width="220" height="8" rx="4" fill="#5b5b78"/>
+                <rect x="32" y="132" width="160" height="8" rx="4" fill="#5b5b78"/>
+                <rect x="32" y="160" width="96" height="26" rx="13" fill="url(#lpGrad)"/>
+                <rect x="44" y="169" width="60" height="8" rx="4" fill="#ffffff"/>
+                <circle cx="320" cy="150" r="60" fill="#7c3aed" opacity="0.14"/>
+                <rect x="278" y="110" width="84" height="84" rx="16" fill="#171730" stroke="#a855f7" stroke-width="1.5"/>
+                <path d="M298 155l14 -18 12 10 18 -24" fill="none" stroke="#c084fc" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <defs>
+                  <linearGradient id="lpGrad" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#7c3aed"/>
+                    <stop offset="100%" stop-color="#d946ef"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </div>
+          <div class="portfolio-card__body">
+            <span class="portfolio-card__category"><!-- [EDITAR] CATEGORIA -->Landing Page</span>
+            <h3><!-- [EDITAR] NOME -->Landing Page Profissional</h3>
+            <p><!-- [EDITAR] DESCRIÇÃO -->Página moderna e estratégica para apresentar serviços e transformar visitantes em clientes.</p>
+            <button type="button" class="btn btn--ghost portfolio-card__btn" data-portfolio-link="#">Ver modelo</button>
+          </div>
+        </article>
+
+        <article class="portfolio-card reveal">
+          <div class="portfolio-card__frame">
+            <span class="portfolio-card__tag">Projeto demonstrativo</span>
+            <div class="portfolio-card__bar" aria-hidden="true">
+              <span class="portfolio-card__dot portfolio-card__dot--red"></span>
+              <span class="portfolio-card__dot portfolio-card__dot--yellow"></span>
+              <span class="portfolio-card__dot portfolio-card__dot--green"></span>
+            </div>
+            <div class="portfolio-card__screen">
+              <!-- [EDITAR] IMAGEM: troque este <svg> por <img src="assets/img/portfolio/site-institucional.jpg" alt="Modelo de Site Institucional" class="portfolio-card__img"> -->
+              <svg viewBox="0 0 400 250" class="portfolio-card__mockup" aria-hidden="true" focusable="false">
+                <rect width="400" height="250" fill="#0d0d1e"/>
+                <rect width="400" height="26" fill="#141428"/>
+                <circle cx="18" cy="13" r="4" fill="#a855f7"/>
+                <rect x="230" y="9" width="30" height="8" rx="4" fill="#5b5b78"/>
+                <rect x="268" y="9" width="30" height="8" rx="4" fill="#5b5b78"/>
+                <rect x="306" y="9" width="30" height="8" rx="4" fill="#5b5b78"/>
+                <rect x="344" y="9" width="30" height="8" rx="4" fill="#5b5b78"/>
+                <rect x="0" y="26" width="400" height="70" fill="#141428"/>
+                <rect x="32" y="48" width="200" height="14" rx="4" fill="#e8e8f0"/>
+                <rect x="32" y="70" width="90" height="18" rx="9" fill="url(#siGrad)"/>
+                <rect x="32" y="120" width="100" height="90" rx="10" fill="#171730" stroke="#2a2a45" stroke-width="1"/>
+                <circle cx="82" cy="146" r="12" fill="#7c3aed" opacity="0.3"/>
+                <rect x="46" y="170" width="72" height="7" rx="3.5" fill="#8a8aa8"/>
+                <rect x="46" y="184" width="52" height="7" rx="3.5" fill="#5b5b78"/>
+                <rect x="150" y="120" width="100" height="90" rx="10" fill="#171730" stroke="#a855f7" stroke-width="1.5"/>
+                <circle cx="200" cy="146" r="12" fill="#a855f7" opacity="0.4"/>
+                <rect x="164" y="170" width="72" height="7" rx="3.5" fill="#c084fc"/>
+                <rect x="164" y="184" width="52" height="7" rx="3.5" fill="#5b5b78"/>
+                <rect x="268" y="120" width="100" height="90" rx="10" fill="#171730" stroke="#2a2a45" stroke-width="1"/>
+                <circle cx="318" cy="146" r="12" fill="#7c3aed" opacity="0.3"/>
+                <rect x="282" y="170" width="72" height="7" rx="3.5" fill="#8a8aa8"/>
+                <rect x="282" y="184" width="52" height="7" rx="3.5" fill="#5b5b78"/>
+                <defs>
+                  <linearGradient id="siGrad" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#7c3aed"/>
+                    <stop offset="100%" stop-color="#d946ef"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </div>
+          <div class="portfolio-card__body">
+            <span class="portfolio-card__category"><!-- [EDITAR] CATEGORIA -->Site Institucional</span>
+            <h3><!-- [EDITAR] NOME -->Site Institucional</h3>
+            <p><!-- [EDITAR] DESCRIÇÃO -->Site completo para fortalecer a presença digital e apresentar uma empresa com profissionalismo.</p>
+            <button type="button" class="btn btn--ghost portfolio-card__btn" data-portfolio-link="#">Ver modelo</button>
+          </div>
+        </article>
+
+        <article class="portfolio-card reveal">
+          <div class="portfolio-card__frame">
+            <span class="portfolio-card__tag">Projeto demonstrativo</span>
+            <div class="portfolio-card__bar" aria-hidden="true">
+              <span class="portfolio-card__dot portfolio-card__dot--red"></span>
+              <span class="portfolio-card__dot portfolio-card__dot--yellow"></span>
+              <span class="portfolio-card__dot portfolio-card__dot--green"></span>
+            </div>
+            <div class="portfolio-card__screen">
+              <!-- [EDITAR] IMAGEM: troque este <svg> por <img src="assets/img/portfolio/cardapio-digital.jpg" alt="Modelo de Cardápio Digital" class="portfolio-card__img"> -->
+              <svg viewBox="0 0 400 250" class="portfolio-card__mockup" aria-hidden="true" focusable="false">
+                <rect width="400" height="250" fill="#0d0d1e"/>
+                <rect width="400" height="26" fill="#141428"/>
+                <circle cx="18" cy="13" r="4" fill="#a855f7"/>
+                <rect x="360" y="8" width="20" height="10" rx="3" fill="#5b5b78"/>
+                <rect x="32" y="44" width="140" height="14" rx="4" fill="#e8e8f0"/>
+                <rect x="32" y="66" width="90" height="8" rx="4" fill="#5b5b78"/>
+                <rect x="32" y="92" width="44" height="36" rx="8" fill="#7c3aed" opacity="0.3"/>
+                <rect x="86" y="96" width="150" height="9" rx="4.5" fill="#c8c8dc"/>
+                <rect x="86" y="112" width="100" height="7" rx="3.5" fill="#5b5b78"/>
+                <rect x="336" y="102" width="40" height="14" rx="4" fill="#171730" stroke="#a855f7" stroke-width="1"/>
+                <rect x="32" y="140" width="44" height="36" rx="8" fill="#d946ef" opacity="0.25"/>
+                <rect x="86" y="144" width="150" height="9" rx="4.5" fill="#c8c8dc"/>
+                <rect x="86" y="160" width="100" height="7" rx="3.5" fill="#5b5b78"/>
+                <rect x="336" y="150" width="40" height="14" rx="4" fill="#171730" stroke="#a855f7" stroke-width="1"/>
+                <rect x="32" y="188" width="44" height="36" rx="8" fill="#7c3aed" opacity="0.3"/>
+                <rect x="86" y="192" width="150" height="9" rx="4.5" fill="#c8c8dc"/>
+                <rect x="86" y="208" width="100" height="7" rx="3.5" fill="#5b5b78"/>
+                <rect x="336" y="198" width="40" height="14" rx="4" fill="#171730" stroke="#a855f7" stroke-width="1"/>
+                <circle cx="358" cy="220" r="22" fill="url(#cdGrad)"/>
+                <path d="M347 210h4l3 16h14l4 -12h-17" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="355" cy="232" r="2" fill="#fff"/>
+                <circle cx="367" cy="232" r="2" fill="#fff"/>
+                <defs>
+                  <linearGradient id="cdGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#a855f7"/>
+                    <stop offset="100%" stop-color="#d946ef"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </div>
+          <div class="portfolio-card__body">
+            <span class="portfolio-card__category"><!-- [EDITAR] CATEGORIA -->Cardápio Digital</span>
+            <h3><!-- [EDITAR] NOME -->Cardápio Digital</h3>
+            <p><!-- [EDITAR] DESCRIÇÃO -->Cardápio responsivo com produtos, adicionais, carrinho e envio do pedido pelo WhatsApp.</p>
+            <button type="button" class="btn btn--ghost portfolio-card__btn" data-portfolio-link="#">Ver modelo</button>
+          </div>
+        </article>
+
+        <article class="portfolio-card reveal">
+          <div class="portfolio-card__frame">
+            <span class="portfolio-card__tag">Projeto demonstrativo</span>
+            <div class="portfolio-card__bar" aria-hidden="true">
+              <span class="portfolio-card__dot portfolio-card__dot--red"></span>
+              <span class="portfolio-card__dot portfolio-card__dot--yellow"></span>
+              <span class="portfolio-card__dot portfolio-card__dot--green"></span>
+            </div>
+            <div class="portfolio-card__screen">
+              <!-- [EDITAR] IMAGEM: troque este <svg> por <img src="assets/img/portfolio/pagina-de-vendas.jpg" alt="Modelo de Página de Vendas" class="portfolio-card__img"> -->
+              <svg viewBox="0 0 400 250" class="portfolio-card__mockup" aria-hidden="true" focusable="false">
+                <rect width="400" height="250" fill="#0d0d1e"/>
+                <rect width="400" height="26" fill="#141428"/>
+                <circle cx="18" cy="13" r="4" fill="#a855f7"/>
+                <rect x="120" y="38" width="160" height="7" rx="3.5" fill="#a855f7"/>
+                <rect x="70" y="54" width="260" height="16" rx="4" fill="#e8e8f0"/>
+                <rect x="110" y="76" width="180" height="16" rx="4" fill="#e8e8f0"/>
+                <rect x="160" y="104" width="80" height="26" rx="13" fill="url(#pvGrad)"/>
+                <rect x="182" y="113" width="36" height="8" rx="4" fill="#fff"/>
+                <path d="M60 150l6 6 10 -12" fill="none" stroke="#c084fc" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="84" y="148" width="140" height="8" rx="4" fill="#8a8aa8"/>
+                <path d="M60 172l6 6 10 -12" fill="none" stroke="#c084fc" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="84" y="170" width="160" height="8" rx="4" fill="#8a8aa8"/>
+                <path d="M60 194l6 6 10 -12" fill="none" stroke="#c084fc" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="84" y="192" width="120" height="8" rx="4" fill="#8a8aa8"/>
+                <rect x="32" y="216" width="336" height="20" rx="10" fill="url(#pvGrad)"/>
+                <defs>
+                  <linearGradient id="pvGrad" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#7c3aed"/>
+                    <stop offset="100%" stop-color="#d946ef"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </div>
+          <div class="portfolio-card__body">
+            <span class="portfolio-card__category"><!-- [EDITAR] CATEGORIA -->Página de Vendas</span>
+            <h3><!-- [EDITAR] NOME -->Página de Vendas</h3>
+            <p><!-- [EDITAR] DESCRIÇÃO -->Página focada na apresentação de produtos, benefícios, ofertas e conversão de vendas.</p>
+            <button type="button" class="btn btn--ghost portfolio-card__btn" data-portfolio-link="#">Ver modelo</button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Visualização ampliada do modelo de portfólio (abre quando o link do botão está "#") -->
+  <div class="portfolio-modal" id="portfolioModal" role="dialog" aria-modal="true" aria-labelledby="portfolioModalTitle" aria-hidden="true">
+    <div class="portfolio-modal__backdrop" data-portfolio-close></div>
+    <div class="portfolio-modal__panel">
+      <button type="button" class="portfolio-modal__close" data-portfolio-close aria-label="Fechar visualização">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <div class="portfolio-modal__media"></div>
+      <div class="portfolio-modal__info">
+        <span class="portfolio-modal__tag">Projeto demonstrativo</span>
+        <p class="portfolio-modal__category"></p>
+        <h3 class="portfolio-modal__title" id="portfolioModalTitle"></h3>
+        <p class="portfolio-modal__desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================= PROCESSO ======================= -->
+  <section class="process" id="processo">
+    <div class="container">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Como funciona</p>
+        <h2>Do orçamento à entrega do seu site</h2>
+      </div>
+
+      <ol class="process__list">
+        <li class="process__step reveal">
+          <span class="process__number">1</span>
+          <h3>Solicitação do orçamento</h3>
+          <p>Você entra em contato e conta um pouco sobre o seu projeto.</p>
+        </li>
+        <li class="process__step reveal">
+          <span class="process__number">2</span>
+          <h3>Planejamento do projeto</h3>
+          <p>Definimos estrutura, conteúdo e objetivos do seu site.</p>
+        </li>
+        <li class="process__step reveal">
+          <span class="process__number">3</span>
+          <h3>Desenvolvimento do site</h3>
+          <p>Criamos seu site com design moderno, responsivo e otimizado.</p>
+        </li>
+        <li class="process__step reveal">
+          <span class="process__number">4</span>
+          <h3>Revisão e entrega</h3>
+          <p>Ajustes finais junto com você e entrega do projeto concluído.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ======================= CTA FINAL + CONTATO ======================= -->
+  <section class="cta-final" id="contato">
+    <div class="container cta-final__grid">
+
+      <div class="cta-final__text reveal">
+        <p class="eyebrow">Vamos começar</p>
+        <h2>Pronto para colocar sua empresa na internet?</h2>
+        <p>Fale com a Web Design Code e solicite um orçamento personalizado para o seu projeto.</p>
+        <a href="#" class="btn btn--primary btn--lg whatsapp-link"
+           data-wa-message="Olá! Conheci a Web Design Code pelo site e gostaria de solicitar um orçamento.">
+          Conversar pelo WhatsApp
+        </a>
+      </div>
+
+      <form class="quote-form reveal" id="quoteForm" novalidate action="javascript:void(0);">
+        <h3>Ou prefere preencher o formulário?</h3>
+        <p class="quote-form__hint">Suas respostas são enviadas direto para o nosso WhatsApp.</p>
+
+        <div class="form-group">
+          <label for="qfName">Nome *</label>
+          <input type="text" id="qfName" name="name" autocomplete="name" required maxlength="80" aria-describedby="qfNameError">
+          <span class="form-error" id="qfNameError">Informe seu nome.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="qfPhone">Telefone / WhatsApp *</label>
+          <input type="tel" id="qfPhone" name="phone" autocomplete="tel" required aria-describedby="qfPhoneError" placeholder="(00) 00000-0000">
+          <span class="form-error" id="qfPhoneError">Informe um telefone válido.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="qfType">Tipo de site *</label>
+          <select id="qfType" name="siteType" required aria-describedby="qfTypeError">
+            <option value="">Selecione uma opção</option>
+            <option value="Landing Page">Landing Page</option>
+            <option value="Site Institucional">Site Institucional</option>
+            <option value="Cardápio Digital">Cardápio Digital</option>
+            <option value="Catálogo de Produtos">Catálogo de Produtos</option>
+            <option value="Página de Vendas">Página de Vendas</option>
+            <option value="Outro">Outro</option>
+          </select>
+          <span class="form-error" id="qfTypeError">Selecione o tipo de site.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="qfMessage">Mensagem</label>
+          <textarea id="qfMessage" name="message" rows="4" maxlength="600" placeholder="Conte um pouco sobre o seu projeto (opcional)"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--lg btn--block">Enviar e continuar no WhatsApp</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__grid">
+
+    <div class="footer__brand">
+      <span class="logo__badge logo__badge--sm">
+        <img src="assets/img/logo.png" alt="Web Design Code" class="logo__img js-logo-img">
+        <span class="logo__fallback">&lt;WDC&gt;</span>
+      </span>
+      <p>Sites modernos, rápidos e estratégicos para o seu negócio.</p>
+    </div>
+
+    <nav class="footer__col" aria-label="Links rápidos">
+      <h4>Links rápidos</h4>
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#planos">Planos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <nav class="footer__col" aria-label="Serviços">
+      <h4>Serviços</h4>
+      <ul>
+        <li><a href="#servicos">Landing Pages</a></li>
+        <li><a href="#servicos">Sites institucionais</a></li>
+        <li><a href="#servicos">Cardápios digitais</a></li>
+        <li><a href="#servicos">Páginas de vendas</a></li>
+        <li><a href="#servicos">Manutenção de sites</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer__col">
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="#" class="whatsapp-link" data-wa-message="Olá! Conheci a Web Design Code pelo site e gostaria de solicitar um orçamento.">WhatsApp</a></li>
+        <!-- [EDITAR] link do Instagram -->
+        <li><a href="https://instagram.com/webdesigncode_oficial" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <!-- [EDITAR] e-mail de contato -->
+        <li><a href="mailto:webdesign3588@gmail.com">webdesign3588@gmail.com</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer__legal container">
+    <div class="footer__legal-links">
+      <!-- [EDITAR] links reais das páginas, se/quando forem criadas -->
+      <a href="#">Política de Privacidade</a>
+      <a href="#">Termos de Uso</a>
+    </div>
+
+    <div class="footer__credit">
+      <p>Feito por <strong>Web Design Code</strong></p>
+      <span class="logo__badge logo__badge--tiny" aria-hidden="true">
+        <img src="assets/img/logo.png" alt="" class="logo__img js-logo-img">
+        <span class="logo__fallback">&lt;WDC&gt;</span>
+      </span>
+    </div>
+
+    <p class="footer__copyright">© 2026 Web Design Code. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<a href="#" class="whatsapp-float whatsapp-link" target="_blank" rel="noopener noreferrer"
+   data-wa-message="Olá! Conheci a Web Design Code pelo site e gostaria de solicitar um orçamento."
+   aria-label="Falar com a Web Design Code pelo WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2.1 3.2 5 4.4.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.1-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1112 20z"/></svg>
+</a>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
